@@ -1,0 +1,162 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root{
+  --bg-color-white: #FFFFFF;
+  --bg-color-black: #121214;
+  --bg-cards: #E1E1E6;
+
+
+
+  --fc-all: #323238;
+
+
+  font-size: 62.5%;
+
+}
+
+body{
+
+  background-color: var(--bg-color-white);
+  color: var(--fc-all);
+
+  font-family:'Roboto', sans-serif;
+  font-weight: 500;
+
+  display: grid;
+
+  min-height: 100vh;
+  grid-template-rows: 5% 95%;
+}
+.dark{
+  background-color: var(--bg-color-black);
+  color: var(--bg-color-white);
+
+  transition: 1s ease;
+}
+.sun{
+  transition: 1s ease;
+}
+#cards .darks{
+  background: #29292E;
+}
+.changeColorNow{
+  fill: #C4C4CC;
+}
+.mode{
+  display:flex;
+  justify-content: end;
+  padding-top: 8rem;
+  padding-right: 8rem;
+}
+.mode button{
+  border: none;
+  background: none;
+  cursor:pointer;
+}
+
+main{
+  justify-self: center;
+  align-self:center;
+
+  width: 821px;
+  height: 336px;  
+
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+
+}
+#controls{
+  
+  justify-self: center;
+  align-self:center;
+  
+}
+
+main #controls .timer{
+  font-size: clamp(4rem, 4rem + 10vh, 8.8rem);
+  
+  display:flex;
+  margin-bottom: 1.6rem;
+}
+
+main #controls .controlsTimer{
+ display: flex;
+ justify-content: space-between;
+}
+
+main #controls .controlsTimer button{
+  border: none;
+  background: var(--bg-color);
+
+  cursor: pointer;
+}
+
+#cards{
+  display:grid;
+  grid-template-columns: 50% 50%;
+}
+
+#cards div{
+  background: var(--bg-cards);
+
+  width: 138px;
+  height: 152px;
+
+  border-radius: 24px;
+
+  display:grid;
+
+  justify-self: center;
+  align-self:center;
+
+}
+
+.hide{
+  display:none;
+  visibility: none;
+  opacity:0;
+}
+#cards .active{
+  background: #02799D;
+
+}
+#cards svg path .whiteButton{
+  fill: white;
+}
+
+#cards div button{
+  justify-self: center;
+  align-self:center;
+
+  border: none;
+  background:none;
+
+  cursor: pointer;
+}
+
+
+input[type="range"]{
+  cursor: pointer;
+  border-radius: 0.6rem;
+  transition: all .5s;
+
+  width: 10rem;
+  justify-self: center;
+  
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  background: var(--text-color);
+  height: 0.35rem;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-top: -0.6rem;
+  background-color: var(--text-color);
+}
+
